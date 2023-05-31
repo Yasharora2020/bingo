@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #09034d;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#gameContent {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#bingoGrid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.bingoNumber {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.bingoNumber.selected {
+    background-color: #00f;
+    color: #fff;
+}
+
+button {
+    margin-right: 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+#gameStages {
+    margin-top: 120px;
+    margin-left: 50px; /* Adjust this value to create the desired space */
+    align-self: flex-start;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    #bingoGrid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .bingoNumber {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    button {
+        padding: 8px;
+    }
+}
